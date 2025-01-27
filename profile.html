@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="images/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="logged_in.html">Home</a></li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <main class="profile-container">
+        <section class="profile-header">
+            <div class="profile-picture">
+                <img src="../images/people/1.png" alt="Profile Picture">
+                <button class="upload-btn">Change Picture</button>
+            </div>
+            <div class="profile-info">
+                <h2><strong>John Doe</strong></h2>
+                <p></p><strong>Email:</strong> john.doe@email.com</p>
+                <p><strong>Birthdate:</strong> January 15 2000</p>
+                <p><strong>Member Since: </strong>October 25 2010</p>
+            </div>
+        </section>
+
+        <section class="profile-content">
+            <div class="tabs">
+                <button class="tab active" data-target="orders">Orders</button>
+                <button class="tab" data-target="settings">Settings</button>
+            </div>
+            <div class="tab-content">
+                <!-- Orders  -->
+                <div class="tab-panel active" id="orders">
+                    <h3>Your Orders</h3>
+                    <ul class="order-list">
+                        <li>
+                            <div class="order-item">
+                                <p><strong>Order #12345</strong></p>
+                                <p>Placed on: 01/10/2025</p>
+                                <p>Status: Delivered</p>
+                                <a href="order-details.html" class="details-btn">View Details</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="order-item">
+                                <p><strong>Order #12346</strong></p>
+                                <p>Placed on: 01/15/2025</p>
+                                <p>Status: Shipped</p>
+                                <a href="order-details.html" class="details-btn">View Details</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Settings -->
+                <div class="tab-panel" id="settings">
+                    <h3>Account Settings</h3>
+                    <form class="settings-form">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" value="John Doe">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" value="john.doe@example.com">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="••••••••">
+                        <button type="submit" class="save-btn">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="images/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> University of the Cordilleras</p>
+            <p><strong>Phone:</strong> +63 955 456 4564</p>
+            <p><strong>Hours:</strong> 6:00Am  - 8:00Pm, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="about.html">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="T&C.html">Terms & Conditions</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="cart.html">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="https://www.aftership.com/track">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="images/pay/app.jpg" alt="">
+                <img src="images/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateway</p>
+            <img src="images/pay/pay.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>Created By <strong>Jhon-rey C. Bocoboc and Jon Eldrick O. Ajedo</strong></p>
+        </div>
+    </footer>  
+
+    <script>
+        // Tab functionality
+        const tabs = document.querySelectorAll('.tab');
+        const tabPanels = document.querySelectorAll('.tab-panel');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const target = tab.dataset.target;
+                tabPanels.forEach(panel => {
+                    panel.id === target ? panel.classList.add('active') : panel.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
