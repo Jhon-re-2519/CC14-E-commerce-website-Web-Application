@@ -146,14 +146,5 @@ const shoes = [
         rating: 5,
         description: "#",
     },
-    {
-        id: 17,
-        name: "BOOK 1 'FLAGSTAFF' EP",
-        brand: "Nike",
-        price: 135.14,
-        image: "images/Shoes/Book 1.png",
-        rating: 5,
-        description: "#",
-    },
 
 ];
