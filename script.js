@@ -1,4 +1,3 @@
-// Existing code for mobile menu
 const bar = document.getElementById('bar');
 const close = document.getElementById('close');
 const nav = document.getElementById('navbar');
@@ -30,7 +29,7 @@ document.querySelector('.closeChat').addEventListener('click', function() {
 // Handle message sending
 document.querySelector('.sendBtn').addEventListener('click', function() {
     var message = document.querySelector('.messageInput').value;
-    if (message.trim() !== 'hello') {
+    if (message.trim() !== '') {
         var messageContainer = document.createElement('div');
         messageContainer.innerHTML = `<strong>You:</strong> ${message}`;
         document.querySelector('.chatContent').appendChild(messageContainer);
@@ -39,13 +38,12 @@ document.querySelector('.sendBtn').addEventListener('click', function() {
     }
 });
 
-
 // typing text effect 
 document.addEventListener('DOMContentLoaded', function () {
     var typed = new Typed(".typing-text", {
-        strings: ["Shoes!", "Polos!", "Jackets!", "T-shirts!", "Hats!"],
+        strings: ["Shoes!", "Clothings!", "Fragrances", "Watches!", "Headwear!"],
         loop: true,
-        typeSpeed: 60,
+        typeSpeed: 70,
         backSpeed: 30,
         backDelay: 500,
     });
