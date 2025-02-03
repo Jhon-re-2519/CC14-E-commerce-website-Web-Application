@@ -16,7 +16,7 @@
         <a href="#"><img src="images/logo.png" class="logo" alt=""></a>
         <div>
             <ul id="navbar">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="logged_in.html">Home</a></li>
                 <li><a class="active" href="Mshop.html">Shop</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
@@ -184,47 +184,47 @@
     </footer>
 
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const proContainer = document.querySelector(".pro-container");
-    
-        shoes.forEach((shoe) => {
-            const priceInPHP = (shoe.price * 58.42).toFixed(0); //should be no decimal 
-            const formattedPrice = parseInt(priceInPHP).toLocaleString(); // comma sa nearest thousand
-    
-            const productCard = `
-                <div class="pro" onclick="redirectToProduct(${shoe.id})">
-                    <img src="${shoe.image}" alt="${shoe.name}">
-                    <div class="des">
-                        <span>${shoe.brand}</span>
-                        <h5>${shoe.name}</h5>
-                        <div class="star">
-                            ${generateStars(shoe.rating)}
+        document.addEventListener("DOMContentLoaded", function () {
+            const proContainer = document.querySelector(".pro-container");
+        
+            shoes.forEach((shoe) => {
+                const priceInPHP = (shoe.price * 58.42).toFixed(0); //should be no decimal 
+                const formattedPrice = parseInt(priceInPHP).toLocaleString(); // comma sa nearest thousand
+        
+                const productCard = `
+                    <div class="pro" onclick="redirectToProduct(${shoe.id})">
+                        <img src="${shoe.image}" alt="${shoe.name}">
+                        <div class="des">
+                            <span>${shoe.brand}</span>
+                            <h5>${shoe.name}</h5>
+                            <div class="star">
+                                ${generateStars(shoe.rating)}
+                            </div>
+                            <h4>₱${formattedPrice}</h4> 
                         </div>
-                        <h4>₱${formattedPrice}</h4> 
+                        <i class="fas fa-shopping-cart cart"></i>
                     </div>
-                    <i class="fas fa-shopping-cart cart"></i>
-                </div>
-            `;
-            proContainer.innerHTML += productCard;
-        });
-    
-        function generateStars(rating) {
-            let stars = "";
-            for (let i = 1; i <= 5; i++) {
-                if (i <= rating) {
-                    stars += `<i class="fas fa-star"></i>`;
-                } else {
-                    stars += `<i class="far fa-star"></i>`;
+                `;
+                proContainer.innerHTML += productCard;
+            });
+        
+            function generateStars(rating) {
+                let stars = "";
+                for (let i = 1; i <= 5; i++) {
+                    if (i <= rating) {
+                        stars += `<i class="fas fa-star"></i>`;
+                    } else {
+                        stars += `<i class="far fa-star"></i>`;
+                    }
                 }
+                return stars;
             }
-            return stars;
+        });
+        
+        function redirectToProduct(shoeId) {
+            window.location.href = `single-product.html?id=${shoeId}`;
         }
-    });
-    
-    function redirectToProduct(shoeId) {
-        window.location.href = `single-product.html?id=${shoeId}`;
-    }
-    
+        
     </script>
 </body>
 </html>
