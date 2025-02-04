@@ -13,7 +13,7 @@ const shoes = [
     { id: 12, name: "1906 W", brand: "New Balance", category: "Sneakers", price: 154.99, image: "images/Shoes/1906w.jpg", rating: 5 },
     { id: 13, name: "NIKE DUNK LOW", brand: "Nike", category: "Sneakers", price: 52.98, image: "images/Shoes/nikedunklow.jpg", rating: 5 },
     { id: 14, name: "NIKE AIR MAX DN PREMIUM", brand: "Nike", category: "Sneakers", price: 160.82, image: "images/Shoes/nikeairmaxdnpremium.jpg", rating: 5 },
-    { id: 15, name: "NIKE AIR MORE UPTEMPO LOW", brand: "Nike", category: "Sneakers", price: 160.82, image: "images/Shoes/nikeairmoreuptempolow.jpg", rating: 5 },
+    { id: 15, name: "NIKE AIR MORE UPTEMPO LOW", brand: "Nike", category: "Sneakers", price: 160.82, image: "images/Shoes/Nikeairmoreuptempolow.jpg", rating: 5 },
 ]
 
 const clothing = [
