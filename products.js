@@ -155,5 +155,15 @@ const shoes = [
         rating: 5,
         description: "#",
     },
+    {
+        id: 18,
+        name: "Air Jordan 1 Low Travis Scott x Fragment",
+        brand: "Nike",
+        price: 138.19,
+        image: "images/Shoes/air-jordan-1-low-travis-scott-x-fragment-release-date.jpg",
+        rating: 5,
+        description: "#",
+    },
+        
 
 ];
