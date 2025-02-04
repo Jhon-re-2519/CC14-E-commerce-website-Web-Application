@@ -157,3 +157,16 @@ const shoes = [
     },
 
 ];
+
+const clothings [
+    
+]
+const fragrances [
+    
+]
+const watches [
+    
+]
+const accessories [
+    
+]
