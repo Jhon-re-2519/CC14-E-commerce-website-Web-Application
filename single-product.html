@@ -10,32 +10,45 @@
         document.addEventListener("DOMContentLoaded", function () {
             const urlParams = new URLSearchParams(window.location.search);
             const productId = urlParams.get("id");
-    
-            const product = shoes.find((p) => p.id == productId);  // Corrected line
-    
-            if (product) {
-                document.getElementById("product-image").src = product.image;
-                document.getElementById("product-name").textContent = product.name;
-                document.getElementById("product-brand").textContent = product.brand;
-                
-                const priceInPHP = (product.price * 58.42).toFixed(0);  // Whole number
-                document.getElementById("product-price").textContent = `₱${parseInt(priceInPHP).toLocaleString()}`;  // Comma for nearest thousand
-                document.getElementById("product-rating").innerHTML = generateStars(product.rating);
-                document.getElementById("product-description").textContent = product.description;
+
+            let product = shoes.find((p) => p.id == productId);  
+            if (!product) {
+            product = clothings.find((p) => p.id == productId);  
             }
-    
+            if (!product) {
+            product = watches.find((p) => p.id == productId);
+            }
+            if (!product) {
+            product = accessories.find((p) => p.id == productId);
+            }
+            if (!product) {
+            product = fragrances.find((p) => p.id == productId);
+            }
+
+            if (product) {
+            document.getElementById("product-image").src = product.image;
+            document.getElementById("product-name").textContent = product.name;
+            document.getElementById("product-brand").textContent = product.brand;
+            
+            const priceInPHP = (product.price * 58.42).toFixed(0);  // Whole number
+            document.getElementById("product-price").textContent = `₱${parseInt(priceInPHP).toLocaleString()}`;  // Comma for nearest thousand
+            document.getElementById("product-rating").innerHTML = generateStars(product.rating);
+            document.getElementById("product-description").textContent = product.description;
+            }
+
             function generateStars(rating) {
-                let stars = "";
-                for (let i = 1; i <= 5; i++) {
-                    if (i <= rating) {
-                        stars += `<i class="fas fa-star"></i>`;
-                    } else {
-                        stars += `<i class="far fa-star"></i>`;
-                    }
+            let stars = "";
+            for (let i = 1; i <= 5; i++) {
+                if (i <= rating) {
+                stars += `<i class="fas fa-star"></i>`;
+                } else {
+                stars += `<i class="far fa-star"></i>`;
                 }
-                return stars;
+            }
+            return stars;
             }
         });
+
     </script>
     
 </head>
