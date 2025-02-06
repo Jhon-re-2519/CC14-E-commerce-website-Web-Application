@@ -15,6 +15,7 @@ const shoes = [
     { id: 14, name: "NIKE AIR MAX DN PREMIUM", brand: "Nike", category: "Sneakers", price: 160.82, image: "images/Shoes/nikeairmaxdnpremium.jpg", rating: 5 },
     { id: 15, name: "NIKE AIR MORE UPTEMPO LOW", brand: "Nike", category: "Sneakers", price: 160.82, image: "images/Shoes/nikeairmoreuptempolow.jpg", rating: 5 },
     { id: 16, name: "NIKE AIR MAX 90", brand: "Nike", category: "Sneakers", price: 160.82, image: "images/Shoes/nikeairmax90.jpg", rating: 5 },
+     { id: 17, name: "Air Jordan 1 Low Travis Scott x Fragment", brand: "Nike", category: "Sneakers", price: 139.31, image: "images/Shoes/air-jordan-1-low-travis-scott-x-fragment-release-date.jpg", rating: 5 },
 ]
 
 const clothing = [
