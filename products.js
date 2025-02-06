@@ -19,21 +19,31 @@ const shoes = [
 ]
 
 const clothing = [
-    { id: 17, name: "PB LABYRINTH JACQUARD T-SHIRT", brand: "Balmain", category: "Clothes", price: 500, image: "images/Clothings/B1.jpg", rating: 5 },
-    { id: 18, name: "T-SHIRT WITH TANK TOP PRINT", brand: "Balmain", category: "Clothes", price: 590, image: "images/Clothings/B2.jpg", rating: 5 },
-    { id: 19, name: "VINTAGE BALMAIN EMBRIDERED T-SHIRT", brand: "Balmain", category: "Clothes", price: 550, image: "images/Clothings/B3.jpg", rating: 5 },
-    { id: 20, name: "T-SHIRT WITH BALMAIN RACING T-SHIRT", brand: "Balmain", category: "Clothes", price: 550, image: "images/Clothings/B4.jpg", rating: 5 },
-    { id: 21, name: "ZIPPED HODIE INFLEECE WITH PATCHES AND UNICORNS", brand: "Givenchy", category: "Clothes", price: 1412.25, image: "images/Clothings/G1.jpg", rating: 5 },
-    { id: 22, name: "T-SHIRT IN COTTON WITH UNICORNS EMBROIDERY", brand: "Givenchy", category: "Clothes", price: 706.12, image: "images/Clothings/G2.jpg", rating: 5 },
-    { id: 23, name: "VARSITY JACKET IN WOOL AND LEATHER WITH PATCHES", brand: "Givenchy", category: "Clothes", price: 4305.63, image: "images/Clothings/G3.jpg", rating: 5 },
-    { id: 24, name: "SLIMFIT T-SHIRT IN COTTON WITH 4G EMBROIDERY", brand: "Givenchy", category: "Clothes", price: 542.51, image: "images/Clothings/G4.jpg", rating: 5 },
-    { id: 25, name: "PEANUT SHORT SLEEVE UT", brand: "Uniqlo", category: "Clothes", price: 17.05, image: "images/Clothings/U1.jpg", rating: 5 },
-    { id: 26, name: "MAGNUM PHOTOS SHORT SLEEVE UT", brand: "Uniqlo", category: "Clothes", price: 31.61, image: "images/Clothings/U2.jpg", rating: 5 },
-    { id: 27, name: "PEACE FOR ALL PALDO MORIYANA T-SHIRT", brand: "Uniqlo", category: "Clothes", price: 31.61, image: "images/Clothings/U3.jpg", rating: 5 },
-    { id: 28, name: "PACE FOR ALL JEAN-MICHEAL BASQUIAT T-SHIRT", brand: "Uniqlo", category: "Clothes", price: 31.61, image: "images/Clothings/U4.jpg", rating: 5 },
-    { id: 29, name: "REGULAR FIT TEXTURED RESORT SHIRT", brand: "H&M", category: "Clothes", price: 34.27, image: "images/Clothings/H1.jpg", rating: 5 },
-    { id: 30, name: "REGULAR FIT TEXTURED RESORT SHIRT", brand: "H&M", category: "Clothes", price: 30.83, image: "images/Clothings/H2.jpg", rating: 5 },
-    { id: 31, name: "SLIM FIT FINE-KNIT T-SHIRT", brand: "H&M", category: "Clothes", price: 17.21, image: "images/Clothings/H3.jpg", rating: 5 },
-    { id: 32, name: "REGUKAR FIT LINEN T-SHIRT", brand: "H&M", category: "Clothes", price: 34.27, image: "images/Clothings/H4.jpg", rating: 5 }
+    { id: 18, name: "PB LABYRINTH JACQUARD T-SHIRT", brand: "Balmain", category: "Clothes", price: 500, image: "images/Clothings/B1.jpg", rating: 5 },
+    { id: 19, name: "T-SHIRT WITH TANK TOP PRINT", brand: "Balmain", category: "Clothes", price: 590, image: "images/Clothings/B2.jpg", rating: 5 },
+    { id: 20, name: "VINTAGE BALMAIN EMBRIDERED T-SHIRT", brand: "Balmain", category: "Clothes", price: 550, image: "images/Clothings/B3.jpg", rating: 5 },
+    { id: 21, name: "T-SHIRT WITH BALMAIN RACING T-SHIRT", brand: "Balmain", category: "Clothes", price: 550, image: "images/Clothings/B4.jpg", rating: 5 },
+    { id: 22, name: "ZIPPED HODIE INFLEECE WITH PATCHES AND UNICORNS", brand: "Givenchy", category: "Clothes", price: 1412.25, image: "images/Clothings/G1.jpg", rating: 5 },
+    { id: 23, name: "T-SHIRT IN COTTON WITH UNICORNS EMBROIDERY", brand: "Givenchy", category: "Clothes", price: 706.12, image: "images/Clothings/G2.jpg", rating: 5 },
+    { id: 24, name: "VARSITY JACKET IN WOOL AND LEATHER WITH PATCHES", brand: "Givenchy", category: "Clothes", price: 4305.63, image: "images/Clothings/G3.jpg", rating: 5 },
+    { id: 25, name: "SLIMFIT T-SHIRT IN COTTON WITH 4G EMBROIDERY", brand: "Givenchy", category: "Clothes", price: 542.51, image: "images/Clothings/G4.jpg", rating: 5 },
+    { id: 26, name: "PEANUT SHORT SLEEVE UT", brand: "Uniqlo", category: "Clothes", price: 17.05, image: "images/Clothings/U1.jpg", rating: 5 },
+    { id: 27, name: "MAGNUM PHOTOS SHORT SLEEVE UT", brand: "Uniqlo", category: "Clothes", price: 31.61, image: "images/Clothings/U2.jpg", rating: 5 },
+    { id: 28, name: "PEACE FOR ALL PALDO MORIYANA T-SHIRT", brand: "Uniqlo", category: "Clothes", price: 31.61, image: "images/Clothings/U3.jpg", rating: 5 },
+    { id: 29, name: "PACE FOR ALL JEAN-MICHEAL BASQUIAT T-SHIRT", brand: "Uniqlo", category: "Clothes", price: 31.61, image: "images/Clothings/U4.jpg", rating: 5 },
+    { id: 30, name: "REGULAR FIT TEXTURED RESORT SHIRT", brand: "H&M", category: "Clothes", price: 34.27, image: "images/Clothings/H1.jpg", rating: 5 },
+    { id: 31, name: "REGULAR FIT TEXTURED RESORT SHIRT", brand: "H&M", category: "Clothes", price: 30.83, image: "images/Clothings/H2.jpg", rating: 5 },
+    { id: 32, name: "SLIM FIT FINE-KNIT T-SHIRT", brand: "H&M", category: "Clothes", price: 17.21, image: "images/Clothings/H3.jpg", rating: 5 },
+    { id: 33, name: "REGUKAR FIT LINEN T-SHIRT", brand: "H&M", category: "Clothes", price: 34.27, image: "images/Clothings/H4.jpg", rating: 5 }
 ]
+
+const fragrances = [
+    { id: 34, name: "Versache Eros", brand: "Versache", category: "Perfume", price: 176.00, image: "images/fragrance/Versache Eros.jpg", rating: 5 },
+    { id: 35, name: "Versache Eros Flame", brand: "Versache", category: "Perfume", price: 176.00, image: "images/fragrance/Versache Eros Flame.jpg", rating: 5 },
+    { id: 36, name: "Aventus Creed", brand: "Aventus", category: "Perfume", price: 172.00, image: "images/fragrance/Aventus Creed.jpg", rating: 5 },
+    { id: 37, name: "Sauvage Dior", brand: "Dior", category: "Perfume", price: 172.00, image: "images/fragrance/Sauvage Dior.jpg", rating: 5 },
+    { id: 38, name: "Blue De Channel", brand: "Channel", category: "Perfume", price: 175.00, image: "images/fragrance/Blue De Channel.jpg", rating: 5 },
+    { id: 39, name: "Yves Saint Laurent", brand: "YSL", category: "Perfume", price: 137.00, image: "images/fragrance/YSL.jpg", rating: 5 },
+]
+
 
