@@ -5,60 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="products.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const urlParams = new URLSearchParams(window.location.search);
             const productId = urlParams.get("id");
 
-            let product = shoes.find((p) => p.id == productId);  
+            let product = shoes.find((p) => p.id == productId);
             if (!product) {
-            product = clothings.find((p) => p.id == productId);  
+                product = clothings.find((p) => p.id == productId);
             }
             if (!product) {
-            product = watches.find((p) => p.id == productId);
+                product = watches.find((p) => p.id == productId);
             }
             if (!product) {
-            product = accessories.find((p) => p.id == productId);
+                product = accessories.find((p) => p.id == productId);
             }
             if (!product) {
-            product = fragrances.find((p) => p.id == productId);
+                product = fragrances.find((p) => p.id == productId);
             }
 
             if (product) {
-            document.getElementById("product-image").src = product.image;
-            document.getElementById("product-name").textContent = product.name;
-            document.getElementById("product-brand").textContent = product.brand;
-            
-            const priceInPHP = (product.price * 58.42).toFixed(0);  // Whole number
-            document.getElementById("product-price").textContent = `₱${parseInt(priceInPHP).toLocaleString()}`;  // Comma for nearest thousand
-            document.getElementById("product-rating").innerHTML = generateStars(product.rating);
-            document.getElementById("product-description").textContent = product.description;
+                document.getElementById("product-image").src = product.image;
+                document.getElementById("product-name").textContent = product.name;
+                document.getElementById("product-brand").textContent = product.brand;
+                
+                const priceInPHP = (product.price * 58.42).toFixed(0);  // Convert to PHP
+                document.getElementById("product-price").textContent = `₱${parseInt(priceInPHP).toLocaleString()}`;
+                document.getElementById("product-rating").innerHTML = generateStars(product.rating);
+                document.getElementById("product-description").textContent = product.description;
+            } else {
+                document.getElementById("product-details").innerHTML = "<h2>Product not found</h2>";
             }
 
             function generateStars(rating) {
-            let stars = "";
-            for (let i = 1; i <= 5; i++) {
-                if (i <= rating) {
-                stars += `<i class="fas fa-star"></i>`;
-                } else {
-                stars += `<i class="far fa-star"></i>`;
+                let stars = "";
+                for (let i = 1; i <= 5; i++) {
+                    if (i <= rating) {
+                        stars += `<i class="fas fa-star"></i>`;
+                    } else {
+                        stars += `<i class="far fa-star"></i>`;
+                    }
                 }
-            }
-            return stars;
+                return stars;
             }
         });
-
     </script>
-    
 </head>
 <body>
     <section id="header">
         <a href="#"><img src="images/logo.png" class="logo" alt=""></a>
         <div>
             <ul id="navbar">
-                <li><a href="logged_in.html.html">Home</a></li>
-                <li><a class="active" href="shop.html">Shop</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -107,52 +106,52 @@
     </section>
 
     <footer class="section-p1">
-            <div class="col">
-                <img class="logo" src="images/logo.png" alt="">
-                <h4>Contact</h4>
-                <p><strong>Address:</strong> University of the Cordilleras</p>
-                <p><strong>Phone:</strong> +63 955 456 4564</p>
-                <p><strong>Hours:</strong> 6:00Am  - 8:00Pm, Mon - Sat</p>
-                <div class="follow">
-                    <h4>Follow us</h4>
-                    <div class="icon">
-                        <i class="fab fa-facebook-f"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-pinterest-p"></i>
-                        <i class="fab fa-youtube"></i>
-                    </div>
+        <div class="col">
+            <img class="logo" src="images/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> University of the Cordilleras</p>
+            <p><strong>Phone:</strong> +63 955 456 4564</p>
+            <p><strong>Hours:</strong> 6:00AM - 8:00PM, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
                 </div>
             </div>
-            <div class="col">
-                <h4>About</h4>
-                <a href="about.html">About us</a>
-                <a href="Under_Constuction.html">Delivery Information</a>
-                <a href="Under_Constuction.html">Privacy Policy</a>
-                <a href="Under_Constuction.html">Terms & Conditions</a>
-                <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="about.html">About us</a>
+            <a href="Under_Constuction.html">Delivery Information</a>
+            <a href="Under_Constuction.html">Privacy Policy</a>
+            <a href="Under_Constuction.html">Terms & Conditions</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="Under_Constuction.html">Sign In</a>
+            <a href="cart.html">View Cart</a>
+            <a href="Under_Constuction.html">My Wishlist</a>
+            <a href="https://www.aftership.com/track">Track My Order</a>
+            <a href="Under_Constuction.html">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="images/pay/app.jpg" alt="">
+                <img src="images/pay/play.jpg" alt="">
             </div>
-            <div class="col">
-                <h4>My Account</h4>
-                <a href="Under_Constuction.html">Sign In</a>
-                <a href="cart.html">View Cart</a>
-                <a href="Under_Constuction.html">My Wishlist</a>
-                <a href="https://www.aftership.com/track">Track My Order</a>
-                <a href="Under_Constuction.html">Help</a>
-            </div>
-            <div class="col install">
-                <h4>Install App</h4>
-                <p>From App Store or Google Play</p>
-                <div class="row">
-                    <img src="images/pay/app.jpg" alt="">
-                    <img src="images/pay/play.jpg" alt="">
-                </div>
-                <p>Secured Payment Gateway</p>
-                <img src="images/pay/pay.png" alt="">
-            </div>
-            <div class="copyright">
-                <p>Created By <strong>Jhon-rey C. Bocoboc and Jon Eldrick O. Ajedo</strong></p>
-            </div>
+            <p>Secured Payment Gateway</p>
+            <img src="images/pay/pay.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>Created By <strong>Jhon-rey C. Bocoboc and Jon Eldrick O. Ajedo</strong></p>
+        </div>
     </footer>
 </body>
 </html>
