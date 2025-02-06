@@ -5,25 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="products.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const urlParams = new URLSearchParams(window.location.search);
-            const productId = urlParams.get("id");
-
-            let product = shoes.find((p) => p.id == productId);
-            if (!product) {
-                product = clothings.find((p) => p.id == productId);
+            const productId = parseInt(urlParams.get("id"));
+    
+            // Find the product in the products object
+            let product = null;
+            for (const category in products) {
+                product = products[category].find((p) => p.id === productId);
+                if (product) break;
             }
-            if (!product) {
-                product = watches.find((p) => p.id == productId);
-            }
-            if (!product) {
-                product = accessories.find((p) => p.id == productId);
-            }
-            if (!product) {
-                product = fragrances.find((p) => p.id == productId);
-            }
-
+    
             if (product) {
                 document.getElementById("product-image").src = product.image;
                 document.getElementById("product-name").textContent = product.name;
@@ -32,11 +26,11 @@
                 const priceInPHP = (product.price * 58.42).toFixed(0);  // Convert to PHP
                 document.getElementById("product-price").textContent = `₱${parseInt(priceInPHP).toLocaleString()}`;
                 document.getElementById("product-rating").innerHTML = generateStars(product.rating);
-                document.getElementById("product-description").textContent = product.description;
+                document.getElementById("product-description").textContent = product.description || "No description available.";
             } else {
                 document.getElementById("product-details").innerHTML = "<h2>Product not found</h2>";
             }
-
+    
             function generateStars(rating) {
                 let stars = "";
                 for (let i = 1; i <= 5; i++) {
@@ -50,28 +44,29 @@
             }
         });
     </script>
+    
 </head>
 <body>
     <section id="header">
         <a href="#"><img src="images/logo.png" class="logo" alt=""></a>
         <div>
             <ul id="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../shop.html">Shop</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
                 <li>
-                    <a href="profile.html" class="profile-button">
+                    <a href="../profile.html" class="profile-button">
                         <img src="images/people/1.png" alt="Profile" style="height: 25px; vertical-align: middle;">
                     </a>
                 </li>
-                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <li id="lg-bag"><a href="../cart.html"><i class="far fa-shopping-bag"></i></a></li>
                 <a href="#" id="close"><i class="far fa-times"></i></a>
             </ul>
         </div>
         <div id="mobile">
-            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <a href="../cart.html"><i class="far fa-shopping-bag"></i></a>
             <i id="bar" class="fas fa-outdent"></i>
         </div>
     </section>
