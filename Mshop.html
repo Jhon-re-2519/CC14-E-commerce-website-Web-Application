@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" /> <!-- ICONS -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="styles.css">
     <script src="products.js"></script>
 </head>
@@ -27,34 +27,18 @@
                 <a href="#" id="close"><i class="far fa-times"></i></a>
             </ul>
         </div>
-        <div id="mobile">
-            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
-            <i id="bar" class="fas fa-outdent"></i>
-        </div>
     </section>
 
     <nav id="main-nav">
-        <ul class="nav-list">                  
-            <li class="nav-item">
-                <a  onclick="showCategory('shoes')"><strong>Shoes</strong></a>
-            </li>
-            <li class="nav-item">
-                <a  onclick="showCategory('clothings')"><strong>Clothings</strong></a>
-            </li>
-            <li class="nav-item">
-                <a  onclick="showCategory('fragrances')"><strong>Fragrances</strong></a>
-            </li>
-            <li class="nav-item">
-                <a  onclick="showCategory('watches')"><strong>Watches</strong></a>
-            </li>
-            <li class="nav-item">
-                <a  onclick="showCategory('accessories')"><strong>Accessories</strong></a>
-            </li>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#" onclick="showCategory('shoes')"><strong>Shoes</strong></a></li>
+            <li class="nav-item"><a href="#" onclick="showCategory('clothings')"><strong>Clothings</strong></a></li>
+            <li class="nav-item"><a href="#" onclick="showCategory('fragrances')"><strong>Fragrances</strong></a></li>
+            <li class="nav-item"><a href="#" onclick="showCategory('watches')"><strong>Watches</strong></a></li>
+            <li class="nav-item"><a href="#" onclick="showCategory('accessories')"><strong>Accessories</strong></a></li>
         </ul>
     </nav>
-        
-    </nav>
-    <nav id="main-nav"></nav>
+
     <section id="page-header">
         <h2>Shop with Us</h2>
         <p>Save more with coupons & up to 70% off!</p>
@@ -62,13 +46,9 @@
 
     <section id="product1" class="section-p1">
         <div class="pro-container">
-            <!-- dynamic appear dto -->
+            <!-- Products will be dynamically inserted here -->
         </div>
-    </section>
-
-    <section id="pagination" class="section-p1">
-        <a>1</a>
-        <a>2</a>
+        <div id="pagination" style="text-align:center; margin-top:20px;"></div>
     </section>
 
     <section id="newsletter" class="section-p1 section-m1">
@@ -82,109 +62,47 @@
         </div>
     </section>
 
-    <!-- Chat Button -->
-    <button class="chatBtn">
-        <i class="fas fa-comments"></i> 
-    </button>
-
-    <!-- Chat Box -->
-    <div class="chatBox">
-        <div class="chatHeader">
-            <span>Customer Support</span>
-            <button class="closeChat" style="background:none; border:none; color:white; font-size:18px;">&times;</button>
-        </div>
-        <div class="chatContent">
-            <div><strong>Support:</strong> Hi! How can I help you today?</div>
-        </div>
-        <div class="chatInput">
-            <input type="text" class="messageInput" placeholder="Type a message...">
-            <button class="sendBtn">Send</button>
-        </div>
-    </div>
-
     <footer class="section-p1">
         <div class="col">
             <img class="logo" src="images/logo.png" alt="">
             <h4>Contact</h4>
             <p><strong>Address:</strong> University of the Cordilleras</p>
             <p><strong>Phone:</strong> +63 955 456 4564</p>
-            <p><strong>Hours:</strong> 6:00Am  - 8:00Pm, Mon - Sat</p>
-            <div class="follow">
-                <h4>Follow us</h4>
-                <div class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-pinterest-p"></i>
-                    <i class="fab fa-youtube"></i>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <h4>About</h4>
-            <a href="about.html">About us</a>
-            <a href="Under_Constuction.html">Delivery Information</a>
-            <a href="Under_Constuction.html">Privacy Policy</a>
-            <a href="Under_Constuction.html">Terms & Conditions</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
-        <div class="col">
-            <h4>My Account</h4>
-            <a href="Under_Constuction.html">Sign In</a>
-            <a href="cart.html">View Cart</a>
-            <a href="Under_Constuction.html">My Wishlist</a>
-            <a href="https://www.aftership.com/track">Track My Order</a>
-            <a href="Under_Constuction.html">Help</a>
-        </div>
-        <div class="col install">
-            <h4>Install App</h4>
-            <p>From App Store or Google Play</p>
-            <div class="row">
-                <img src="images/pay/app.jpg" alt="">
-                <img src="images/pay/play.jpg" alt="">
-            </div>
-            <p>Secured Payment Gateway</p>
-            <img src="images/pay/pay.png" alt="">
-        </div>
-        <div class="copyright">
-            <p>Created By <strong>Jhon-rey C. Bocoboc and Jon Eldrick O. Ajedo</strong></p>
+            <p><strong>Hours:</strong> 6:00Am - 8:00Pm, Mon - Sat</p>
         </div>
     </footer>
-    <script src="script.js"></script>
+
     <script>
         let currentCategory = 'shoes';
         let currentPage = 1;
-        const productsPerPage = 16; // Change this number based on how many products you want per page
-    
+        const productsPerPage = 16;
+
         function showCategory(category, page = 1) {
             currentCategory = category;
             currentPage = page;
             const proContainer = document.querySelector(".pro-container");
-            proContainer.innerHTML = ""; // Clear previous content
-    
+            proContainer.innerHTML = "";
+
             const selectedProducts = products[category] || [];
             const totalPages = Math.ceil(selectedProducts.length / productsPerPage);
-    
+
             if (selectedProducts.length === 0) {
                 proContainer.innerHTML = `<p>No products available in this category.</p>`;
             } else {
                 const startIndex = (page - 1) * productsPerPage;
                 const endIndex = startIndex + productsPerPage;
                 const paginatedProducts = selectedProducts.slice(startIndex, endIndex);
-    
+
                 paginatedProducts.forEach((product) => {
                     const priceInPHP = (product.price * 58.42).toFixed(0);
                     const formattedPrice = parseInt(priceInPHP).toLocaleString();
-    
+
                     const productCard = `
                         <div class="pro" onclick="redirectToProduct(${product.id})">
                             <img src="${product.image}" alt="${product.name}">
                             <div class="des">
                                 <span>${product.brand}</span>
                                 <h5>${product.name}</h5>
-                                <div class="star">
-                                    ${generateStars(product.rating)}
-                                </div>
                                 <h4>₱${formattedPrice}</h4> 
                             </div>
                             <i class="fas fa-shopping-cart cart"></i>
@@ -193,47 +111,47 @@
                     proContainer.innerHTML += productCard;
                 });
             }
-    
+
             updatePagination(totalPages);
         }
-    
+
         function updatePagination(totalPages) {
             const paginationContainer = document.getElementById("pagination");
             paginationContainer.innerHTML = "";
-    
+
             for (let i = 1; i <= totalPages; i++) {
                 const pageLink = document.createElement("a");
                 pageLink.textContent = i;
                 pageLink.href = "#";
-                pageLink.onclick = function () {
+                pageLink.style.padding = "8px 12px";
+                pageLink.style.margin = "0 5px";
+                pageLink.style.border = "1px solid #ccc";
+                pageLink.style.textDecoration = "none";
+                pageLink.style.color = "#333";
+                pageLink.style.borderRadius = "5px";
+                pageLink.onclick = function (event) {
+                    event.preventDefault();
                     showCategory(currentCategory, i);
                 };
-    
+
                 if (i === currentPage) {
                     pageLink.style.fontWeight = "bold";
-                    pageLink.style.textDecoration = "underline";
+                    pageLink.style.backgroundColor = "#007bff";
+                    pageLink.style.color = "#fff";
+                    pageLink.style.borderColor = "#007bff";
                 }
-    
+
                 paginationContainer.appendChild(pageLink);
             }
         }
-    
-        function generateStars(rating) {
-            let stars = "";
-            for (let i = 1; i <= 5; i++) {
-                stars += i <= rating ? `<i class="fas fa-star"></i>` : `<i class="far fa-star"></i>`;
-            }
-            return stars;
-        }
-    
+
         function redirectToProduct(productId) {
             window.location.href = `single-product.html?id=${productId}`;
         }
-    
+
         document.addEventListener("DOMContentLoaded", function () {
             showCategory('shoes');
         });
     </script>
-    
 </body>
-</html> 
+</html>
