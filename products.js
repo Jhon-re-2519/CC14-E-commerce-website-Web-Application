@@ -39,7 +39,8 @@ const products = {
         { id: 37, name: "T-Clip Set Trainers", brand: "Lacoste", price: 87.57, rating: 5, image: "images/Shoes/L5.jpg" },
         { id: 38, name: "Powercourt Logo Tongue Leather Trainers", brand: "Lacoste", price: 75.00, rating: 5, image: "images/Shoes/L6.jpg" },
         { id: 39, name: "L004 Trainers", brand: "Lacoste", price: 75.00, rating: 5, image: "images/Shoes/L7.jpg" },
-        { id: 40, name: "Elite Active Trainers", brand: "Lacoste", price: 108.99, rating: 5, image: "images/Shoes/L8.jpg" }
+        { id: 40, name: "Elite Active Trainers", brand: "Lacoste", price: 108.99, rating: 5, image: "images/Shoes/L8.jpg" },
+        { id: 94, name: "Air Jordan 1 Low Travis Scott x Fragment", brand: "Nike", category: "Sneakers", price: 139.31, image: "images/Shoes/air-jordan-1-low-travis-scott-x-fragment-release-date.jpg", rating: 5 }
     ],
 
     clothings: [
