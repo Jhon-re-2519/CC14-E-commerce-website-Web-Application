@@ -95,8 +95,8 @@ const products = {
         { id: 87, name: "EFV620D-1A4V", brand: "Edifice", price: 110.00, rating: 5, image: "images/Watches/E8.jpg" }
     ],
     fragrances: [
-        { id: 88, name: "Versache Eros", brand: "Versache", category: "Perfume", price: 176.00, image: "images/fragrance/Versache Eros.jpg", rating: 5 },
-        { id: 89, name: "Versache Eros Flame", brand: "Versache", category: "Perfume", price: 176.00, image: "images/fragrance/Versace Eros Flame.jpg", rating: 5 },
+        { id: 88, name: "Versace Eros", brand: "Versace", category: "Perfume", price: 176.00, image: "images/fragrance/Versache Eros.jpg", rating: 5 },
+        { id: 89, name: "Versace Eros Flame", brand: "Versace", category: "Perfume", price: 176.00, image: "images/fragrance/Versace Eros Flame.jpg", rating: 5 },
         { id: 90, name: "Aventus Creed", brand: "Aventus", category: "Perfume", price: 172.00, image: "images/fragrance/Aventus Creed.jpg", rating: 5 },
         { id: 91, name: "Sauvage Dior", brand: "Dior", category: "Perfume", price: 172.00, image: "images/fragrance/Sauvage Dior.jpg", rating: 5 },
         { id: 92, name: "Blue De Channel", brand: "Channel", category: "Perfume", price: 175.00, image: "images/fragrance/Blue De Channel.jpg", rating: 5 },
