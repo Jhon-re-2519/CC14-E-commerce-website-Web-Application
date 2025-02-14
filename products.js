@@ -12,7 +12,7 @@ const products = {
         { id: 10, name: "574 Core", brand: "New Balance", price: 89.99, rating: 5, image: "images/Shoes/574core.jpg" },
         { id: 11, name: "1906 Utility", brand: "New Balance", price: 169.99, rating: 5, image: "images/Shoes/1906utility.jpg" },
         { id: 12, name: "1906 W", brand: "New Balance", price: 154.99, rating: 5, image: "images/Shoes/1906w.jpg" },
-        { id: 13, name: "Nike Dunk Low", brand: "Nike", price: 52.98, rating: 5, image: "images/Shoes/nikedunklow.jpg" },
+        { id: 1, name: "Nike Dunk Low", brand: "Nike", price: 52.98, rating: 5, image: "images/Shoes/nikedunklow.jpg" },
         { id: 14, name: "Nike Air Max Dn Premium", brand: "Nike", price: 160.82, rating: 5, image: "images/Shoes/nikeairmaxdnpremium.jpg" },
         { id: 15, name: "Nike Air More Uptempo Low", brand: "Nike", price: 160.82, rating: 5, image: "images/Shoes/Nikeairmoreuptempolow.jpg" },
         { id: 16, name: "Nike Air Max 90", brand: "Nike", price: 160.82, rating: 5, image: "images/Shoes/nikeairmax90.jpg" },
